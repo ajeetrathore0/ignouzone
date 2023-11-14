@@ -1,0 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap');
+
+:root{
+    --mainbg:#131615;
+    --menubarbg: rgb(31 34 30);
+}
+
+*{
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+font-family: 'Karla', sans-serif;
+}
+
+body,html{
+    background-color: var(--mainbg);
+    margin-top: 60px;
+    margin-bottom:50px ;
+    user-select: none;
+    overscroll-behavior: none;
+/* overflow-x:hidden; */
+}
+a{
+    text-decoration: none;
+}
