@@ -126,7 +126,7 @@ const Solveassignment = () => {
                                     <div>
                                         <span style={{ width: "80%" }}>
                                             <h4>{item}</h4>
-                                            <p>All  assignment</p>
+                                            <p>All solve assignment</p>
                                         </span>
                                         <span>
                                             <button onClick={handleChooseProgram}>Select</button>
@@ -218,6 +218,7 @@ const downloadBase64File = (base64Data, fileName) => {
     const byteCharacters = atob(base64Data);
     const byteNumbers = new Array(byteCharacters.length);
 
+
     for (let i = 0; i < byteCharacters.length; i++) {
         byteNumbers[i] = byteCharacters.charCodeAt(i);
     }
@@ -225,7 +226,8 @@ const downloadBase64File = (base64Data, fileName) => {
     const byteArray = new Uint8Array(byteNumbers);
     const blob = new Blob([byteArray], { type: 'application/octet-stream' });
 
-    let a=FileSaver.saveAs(blob, fileName);
+    let a = FileSaver.saveAs(blob, fileName);
+
     return true
 };
 
@@ -236,20 +238,21 @@ const downloadfiles = (base64Data, fileName) => {
     link.href = `data:application/pdf;base64,${base64Data}`;
     link.download = fileName;
     link.click();
-  };
+};
 
 
 
 
 export function Checkurl() {
 
-    const [loader,setLoader]=useState(false)
+    const [loader, setLoader] = useState(false)
 
     const { id } = useParams()
     let prg = id.split("_")
     let semesters = prg[1]
     let i = 'semester' + semesters[semesters.length - 1]
-    const url = "https://jdmrealestate.pythonanywhere.com/assets/getassignment"
+    const url = "https://killdeer-precise-zebra.ngrok-free.app/assets/getassignment"
+    // const url = "https://jdmrealestate.pythonanywhere.com/assets/getassignment"
     const [data, setData] = useState(null);
 
     const bytetomb = (bytes) => {
@@ -263,19 +266,22 @@ export function Checkurl() {
         }
         setLoader(true)
         axios.post(url, requestData)
-        .then(response => {
-            const res = response.data; // Assuming the response contains base64 data
-           
-            const fileName = res.name+'.pdf'; // Replace with your desired file name
-           let check= downloadBase64File(res.file, fileName);
-           
-           if(check){
-            setLoader(false)
-           }
-          })
-          .catch(error => {
-            console.error('Error:', error);
-          });
+            .then(response => {
+                const res = response.data; // Assuming the response contains base64 data
+                response.request.onload = (e) => {
+                    console.log(e)
+                }
+                const fileName = res.name + '.pdf'; // Replace with your desired file name
+                let check = downloadBase64File(res.file, fileName);
+                console.log(check)
+
+                if (check) {
+                    setLoader(false)
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
 
 
 
@@ -297,7 +303,7 @@ export function Checkurl() {
     }, []);
 
     if (data === null) {
-        return <div style={{display:"flex",color:"white",justifyContent:"center"}}>Loading...</div>;
+        return <div style={{ display: "flex", color: "white", justifyContent: "center" }}>Loading...</div>;
     }
 
     return (
@@ -306,13 +312,13 @@ export function Checkurl() {
                 {
                     loader ? (
                         <>
-                        <div className="loader">
-                            <span></span>
-			    <p>Downloading...</p>
-		            
-                        </div>
+                            <div className="loaders">
+                                <span></span>
+                                <p>Downloading...</p>
+
+                            </div>
                         </>
-                    ):(
+                    ) : (
                         <>
                         </>
                     )
@@ -327,13 +333,13 @@ export function Checkurl() {
 
                                 <>
                                     <div className="book">
-                                        <span><img className='bookimg' src={'data:image/png;base64,' + elem.img} /></span>
+                                        <span><img className='bookimg' src={'data:image/webp;base64,' + elem.img} alt={elem['course code']} /></span>
                                         <span>
                                             <h3>
                                                 {elem['course code']}
                                             </h3>
                                             <p><i>Size :</i> &nbsp; <b>{bytetomb(elem.size)} MB</b> </p>
-                                            <button content={elem.uuid} onClick={() => { let a = String(elem.uuid); downloadAssignment(a) }}>Download</button>
+                                            <Link to={elem.uuid} >Download</Link>
                                         </span>
                                     </div>
                                 </>
@@ -349,10 +355,10 @@ export function Checkurl() {
 
 
 const Assignment = () => {
-    
-    useEffect(()=>{
-        document.title="Assignments"
-    },[])
+
+    useEffect(() => {
+        document.title = "Assignments"
+    }, [])
     return (
         <>
             <Solveassignment />

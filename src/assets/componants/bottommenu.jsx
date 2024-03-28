@@ -34,7 +34,7 @@ function Bottommenu() {
                             </Link>
                                 </li>
                                 <li className="3">
-                            <Link to='previewspaper'>
+                            <Link to='previousyearpaper'>
                                     <span>
                                         <img src={pyp} alt="pyp" />
                                         <p>Previous Paper</p>

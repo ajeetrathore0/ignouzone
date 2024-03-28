@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import search from '../icons/search.png'
 import '../style/slider.css'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import notes from '../icons/edit.png'
 import update from '../icons/bell.png'
 import book from '../icons/book.png'
@@ -101,6 +101,15 @@ const Options = () => {
                     <div className="line1">
                         <ul>
                             <li>
+                                <Link to='/services'>
+                                    <span>
+                                        <img src={service} alt="" />
+                                        <p>Ignou Services</p>
+
+                                    </span>
+                                </Link>
+                            </li>
+                            <li>
                                 <span>
                                     <img src={book} alt="" style={{ filter: 'drop-shadow(0px 0px 1px blue)', boxShadow: '0 0 35px blue' }} />
                                     <p>Books</p>
@@ -112,24 +121,26 @@ const Options = () => {
                                     <p>Notes</p>
                                 </span>
                             </li>
-                            <li>
-                                <span>
-                                    <img src={update} alt="" style={{ filter: 'drop-shadow(0px 0px 1px yellow)', boxShadow: '0 0 35px yellow' }} />
-                                    <p>Ignou update</p>
-                                </span>
-                            </li>
 
                             <li>
-                                <span>
-                                    <img src={file} alt="" style={{ filter: 'drop-shadow(0px 0px 1px green)', boxShadow: '0 0 35px green' }} />
-                                    <p>PYP</p>
-                                </span>
+                                <Link to='/previousyearpaper'>
+                                    <span>
+                                        <img src={file} alt="" style={{ filter: 'drop-shadow(0px 0px 1px green)', boxShadow: '0 0 35px green' }} />
+                                        <p>PYP</p>
+                                    </span>
+                                </Link>
                             </li>
 
                         </ul>
                     </div>
                     <div className="line2">
                         <ul>
+                            <li>
+                                <span>
+                                    <img src={update} alt="" style={{ filter: 'drop-shadow(0px 0px 1px yellow)', boxShadow: '0 0 35px yellow' }} />
+                                    <p>Ignou updates</p>
+                                </span>
+                            </li>
                             <li>
                                 <span>
                                     <img src={quiz} alt="" />
@@ -139,16 +150,7 @@ const Options = () => {
                             <li>
                                 <span>
                                     <img src={video} alt="" />
-                                    <p>Video Source</p>
-                                </span>
-                            </li>
-                            <li>
-                                <span>
-                                    <img src={service} alt="" />
-                                    <Link to='/services'>
-                                    <p>Ignou Services</p>
-
-                                    </Link>
+                                    <p>V-Source</p>
                                 </span>
                             </li>
                             <li>
@@ -174,22 +176,22 @@ const Videosource = () => {
     return (
         <>
             <section id="videosource">
-                
+
                 <div className="videosource">
                     <div className='videosourcelogo'>
-                    <img src={video} alt="" />
-                    <p>Prepare your exam with us</p>
-                    <img src={free} alt="" style={{filter:'invert(1)',width:'19px'}} />
-                </div>
+                        <img src={video} alt="" />
+                        <p>Prepare your exam with us</p>
+                        <img src={free} alt="" style={{ filter: 'invert(1)', width: '19px' }} />
+                    </div>
                     <div className="videolist">
                         <span>
                             <img src={bca} alt="" />
                         </span>
                         <span>
-                            <h3 style={{fontWeight:"800"}}>BCA Classes</h3>
+                            <h3 style={{ fontWeight: "800" }}>BCA Classes</h3>
                             <p >All Semester </p>
                             <i>BCA | MCA</i>
-                            
+
                         </span>
                     </div>
                     <div className="videolist">
@@ -197,10 +199,10 @@ const Videosource = () => {
                             <img src={ba} alt="" />
                         </span>
                         <span>
-                            <h3 style={{fontWeight:"800"}}>BA / B.com Classes</h3>
+                            <h3 style={{ fontWeight: "800" }}>BA / B.com Classes</h3>
                             <p >All Semester </p>
                             <i>BA | B.COM</i>
-                            
+
                         </span>
                     </div>
                     <div className="videolist">
@@ -208,16 +210,16 @@ const Videosource = () => {
                             <img src={bsc} alt="" />
                         </span>
                         <span>
-                            <h3 style={{fontWeight:"800"}}>Bsc Classes</h3>
+                            <h3 style={{ fontWeight: "800" }}>Bsc Classes</h3>
                             <p >All Semester </p>
                             <i>B.sc</i>
-                            
+
                         </span>
                     </div>
-                    <div className="videolist" style={{background:"transparent"}}>
-                        
-                            <button>Explore More</button>
-                        
+                    <div className="videolist" style={{ background: "transparent" }}>
+
+                        <button>Explore More</button>
+
                     </div>
                 </div>
             </section>
@@ -227,53 +229,53 @@ const Videosource = () => {
 }
 
 
-const Bookshell=()=>{
+const Bookshell = () => {
     return (
         <>
 
-        <section id="booksell">
-            <span id="ignoubooktitle" ><p ><b style={{color:"blue"}}>♦</b><font>Ignou Books</font></p><i><button>View all</button></i></span>
-            <div className="booksell">
-                <div className="book">
-                    <span><img className='bookimg' src={bcs_012} alt="" /></span>
-                    <span>
-                        <h3>
-                            BCS-012 
-                        </h3>
-                        <p><strike>₹. 299</strike> &nbsp; <b>108</b> </p>
-                    </span>
+            <section id="booksell">
+                <span id="ignoubooktitle" ><p ><b style={{ color: "blue" }}>♦</b><font>Ignou Books</font></p><i><button>View all</button></i></span>
+                <div className="booksell">
+                    <div className="book">
+                        <span><img className='bookimg' src={bcs_012} alt="" /></span>
+                        <span>
+                            <h3>
+                                BCS-012
+                            </h3>
+                            <p><strike>₹. 299</strike> &nbsp; <b>108</b> </p>
+                        </span>
+                    </div>
+                    <div className="book">
+                        <span><img className='bookimg' src={mba} alt="" /></span>
+                        <span>
+                            <h3>
+                                MBA All
+                            </h3>
+                            <p><strike>₹. 499</strike> &nbsp; <b>269</b> </p>
+                        </span>
+                    </div>
+                    <div className="book">
+                        <span><img className='bookimg' src={mcsl_216} alt="" /></span>
+                        <span>
+                            <h3>
+                                mcsl-216
+                            </h3>
+                            <p><strike>₹. 999</strike> &nbsp; <b>700</b> </p>
+                        </span>
+                    </div>
+                    <div className="book">
+                        <span><img className='bookimg' src={mcs_14} alt="" /></span>
+                        <span>
+                            <h3>
+                                MCS-014
+                            </h3>
+                            <p><strike>₹. 459</strike> &nbsp; <b>399</b> </p>
+                        </span>
+                    </div>
+
                 </div>
-                <div className="book">
-                    <span><img className='bookimg' src={mba} alt="" /></span>
-                    <span>
-                        <h3>
-                           MBA All 
-                        </h3>
-                        <p><strike>₹. 499</strike> &nbsp; <b>269</b> </p>
-                    </span>
-                </div>
-                <div className="book">
-                    <span><img className='bookimg' src={mcsl_216} alt="" /></span>
-                    <span>
-                        <h3>
-                            mcsl-216
-                        </h3>
-                        <p><strike>₹. 999</strike> &nbsp; <b>700</b> </p>
-                    </span>
-                </div>
-                <div className="book">
-                    <span><img className='bookimg' src={mcs_14} alt="" /></span>
-                    <span>
-                        <h3>
-                            MCS-014
-                        </h3>
-                        <p><strike>₹. 459</strike> &nbsp; <b>399</b> </p>
-                    </span>
-                </div>
-                
-            </div>
-        </section>
-        
+            </section>
+
         </>
     )
 }
@@ -281,17 +283,17 @@ const Bookshell=()=>{
 
 
 
-const Quicklinks=()=>{
-    return(
+const Quicklinks = () => {
+    return (
 
         <>
 
-        <section id="quicklinks">
-            <div className="quicklinks">
+            <section id="quicklinks">
+                <div className="quicklinks">
 
-            </div>
-        </section>
-        
+                </div>
+            </section>
+
         </>
     )
 }
@@ -299,40 +301,40 @@ const Quicklinks=()=>{
 
 
 
-const PandP=()=>{
-    return(
+const PandP = () => {
+    return (
         <>
-        <section id="privacy">
-            <div className="privacy">
-                <span>
-                    <h3>Privacy & Policy</h3>
-                    <p>
-                        We are Providing some facility to ignou student without taking any sensitive information.
-                        Our website is selling assingment , books and notes , we are also provide some services using input of enrollment (no.) like gradcard and assignment submision.
-                    </p>
-                </span>
+            <section id="privacy">
+                <div className="privacy">
+                    <span>
+                        <h3>Privacy & Policy</h3>
+                        <p>
+                            We are Providing some facility to ignou student without taking any sensitive information.
+                            Our website is selling assingment , books and notes , we are also provide some services using input of enrollment (no.) like gradcard and assignment submision.
+                        </p>
+                    </span>
 
-            </div>
-        </section>
+                </div>
+            </section>
         </>
     )
 }
 
 
 const Home = () => {
-    useEffect(()=>{
-        document.title="Home || Ignou zone"
-    },[])
+    useEffect(() => {
+        document.title = "Home || Ignou zone"
+    }, [])
 
     return (
         <>
             <Searchbar />
             <Slider />
             <Options />
-            <Videosource/>
-            <Bookshell/>
-            <Quicklinks/>
-            <PandP/>
+            <Videosource />
+            <Bookshell />
+            <Quicklinks />
+            <PandP />
         </>
     )
 }

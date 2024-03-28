@@ -6,7 +6,7 @@
     }
 
     #topmenu div.topmenu .mainlogo img {
-        width: 130px;
+        width: 100px;
     }
 
     .notification img {
@@ -104,13 +104,105 @@
         font-size: 13px !important;
     }
 
-    .freeandpaid{
+    .freeandpaid {
         font-size: 20px;
     }
 
-    .solveassignmentsfiles{
+    .solveassignmentsfiles {
 
         grid-template-columns: 150px 150px;
     }
 
+    .gradeform {
+        flex-wrap: wrap;
+    }
+
+    .gradeform .program select {
+        width: 80vw
+    }
+
+    .gradeform input {
+        width: 50vw
+    }
+
+    .gradeform input[type='submit'] {
+        width: calc(30vw - 20px)
+    }
+
+    .gradeform label {
+        padding: 5px
+    }
+
+    .fullmarksheet .numbers span p:nth-child(3) {
+        width: 63px  !important;
+    }
+
+    .fullmarksheet .numbers span p:nth-child(4) {
+        width: 65px;
+    }
+
+    .fullmarksheet .numbers span p:nth-child(2) {
+        width: 79px;
+    }
+    .fullmarksheet #assignmentstatus .numbers span p:nth-child(2) {
+        width: 126px;
+    }
+    .fullmarksheet #assignmentstatus .numbers span p:nth-child(4) {
+        width: 74px;
+    }
+    .fullmarksheet #assignmentstatus .numbers span p:nth-child(1) {
+        width: 70px;
+    }
+
+    .fullmarksheet .marks {
+        font-size: 9px;
+    }
+
+    .fullmarksheet .numbers span p:nth-child(1) {
+        width: 78px;
+    }
+
+    .fullmarksheet .personalinfo span b {
+        width: 76px
+    }
+
+    .fullmarksheet {
+        padding: 3px;
+        scale: .8
+    }
+
+    .upersidearea .slogan {
+        font-size: 11px
+    }
+
+    .upersidearea img {
+        width: 70px
+    }
+
+    .upersidearea .slogan h1 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .fullmarksheet .personalinfo {
+        font-size: 11px
+    }
+
+    .fullmarksheet .title {
+        width: 69px;
+    }
+    #assignmentimg .book{
+        flex-direction: column;
+        background: -webkit-linear-gradient(rgb(109, 100, 100),rgb(84, 84, 105));
+        background: transparent;
+        box-shadow: 0 0 10px rgba(165, 165, 184, 0.671);
+    }
+    #assignmentimg{
+        display: flex;
+        justify-content: center;
+    }
+    #assignmentimg img{
+        width: 85vw;
+        height: auto;
+    }
 }
