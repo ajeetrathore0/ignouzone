@@ -2,7 +2,7 @@ import React from "react";
 import home from '../icons/home.png'
 import assignment from '../icons/ballot.png'
 import pyp from '../icons/file.png'
-import more from '../icons/menu.png'
+import profile from '../icons/profile.png'
 import { Link } from 'react-router-dom'
 
 
@@ -42,10 +42,10 @@ function Bottommenu() {
                             </Link>
                                 </li>
                                 <li className="4">
-                            <Link to='/more'>
+                            <Link to='/profile'>
                                     <span>
-                                        <img src={more} alt="more" />
-                                        <p>More</p>
+                                        <img src={profile} alt="more" />
+                                        <p>Profile</p>
                                     </span>
                             </Link>
                                 </li>

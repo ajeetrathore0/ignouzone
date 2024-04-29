@@ -1,8 +1,15 @@
 @media (max-width:500px) {
+    * {
+        cursor: none !important;
+    }
+
+    html {
+        height: 100vh;
+    }
 
     body,
     html {
-        margin-top: 40px;
+        margin-top: 22px;
     }
 
     #topmenu div.topmenu .mainlogo img {
@@ -11,6 +18,7 @@
 
     .notification img {
         width: 20px;
+        background: #dcdfda;
     }
 
     .menulist ul li {
@@ -34,6 +42,7 @@
     .image-slider {
         transform: translateY(0px) !important;
         width: 90vw !important;
+        min-height: 237px !important;
     }
 
     .slider-button {
@@ -68,6 +77,7 @@
 
     .videolist h3 {
         font-size: 15px;
+        width: max-content;
     }
 
     .videolist p {
@@ -134,7 +144,7 @@
     }
 
     .fullmarksheet .numbers span p:nth-child(3) {
-        width: 63px  !important;
+        width: 63px !important;
     }
 
     .fullmarksheet .numbers span p:nth-child(4) {
@@ -144,12 +154,15 @@
     .fullmarksheet .numbers span p:nth-child(2) {
         width: 79px;
     }
+
     .fullmarksheet #assignmentstatus .numbers span p:nth-child(2) {
         width: 126px;
     }
+
     .fullmarksheet #assignmentstatus .numbers span p:nth-child(4) {
         width: 74px;
     }
+
     .fullmarksheet #assignmentstatus .numbers span p:nth-child(1) {
         width: 70px;
     }
@@ -167,8 +180,8 @@
     }
 
     .fullmarksheet {
-        padding: 3px;
-        scale: .8
+        padding: 0px;
+        scale: .9
     }
 
     .upersidearea .slogan {
@@ -191,18 +204,144 @@
     .fullmarksheet .title {
         width: 69px;
     }
-    #assignmentimg .book{
+
+    #assignmentimg .book {
         flex-direction: column;
-        background: -webkit-linear-gradient(rgb(109, 100, 100),rgb(84, 84, 105));
+        background: -webkit-linear-gradient(rgb(109, 100, 100), rgb(84, 84, 105));
         background: transparent;
-        box-shadow: 0 0 10px rgba(165, 165, 184, 0.671);
+        width: 100vw;
     }
-    #assignmentimg{
+
+    #assignmentimg h4 i {
+        font-style: normal;
+        font-family: monospace;
+    }
+
+    #assignmentimg {
         display: flex;
         justify-content: center;
+        width: 100vw;
     }
-    #assignmentimg img{
-        width: 85vw;
+
+    #assignmentimg img {
+        width: 50vw;
         height: auto;
+
+    }
+
+    #searchbar {
+        width: 30px !important;
+        background: transparent !important;
+        position: absolute !important;
+        right: 90px !important;
+        padding: 0;
+        top: 18px;
+    }
+
+    #searchbar img {
+        margin: 5px
+    }
+
+    .pagemenubar {
+        position: fixed;
+        z-index: 1;
+        background: var(--mainbg);
+        padding-right: 0px;
+        transform: translateX(-300px);
+        padding-top: 20px;
+    }
+
+    .toggle .pagemenubar {
+        transform: translateX(0px);
+    }
+
+    #allservices {
+
+        a {
+
+            width: 80vw;
+
+        }
+    }
+
+    .videosource .videolist {
+        cursor: auto
+    }
+
+    .pyp .selectdetails {
+        width: 80vw;
+    }
+
+    .homepartition {
+        padding-top: 18px;
+    }
+
+    .pagecontent {
+        padding-top: 0;
+    }
+
+    #search input {
+        font-size: 15px;
+
+    }
+
+    .solveassignmentsfiles .book h3 {
+        width: 100% !important;
+        margin: 10px 3px;
+        border-bottom: 1px solid #525050;
+        padding: 3px;
+    }
+
+    .solveassignmentsfiles .book span {
+        width: 100%;
+        h4{
+            background: fixed;
+        }
+        h4:nth-child(2) {
+            margin: 4px 0;
+            border: 1px solid;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        h4:nth-child(3) {
+            padding: 8px 0px;
+            border-bottom: 1px solid;
+            margin: 9px 0;
+            border-radius: 5px;
+        }
+    }
+
+}
+
+@media (max-width:876px) {
+    #searchbar {
+        width: 40px;
+        background: transparent;
+        position: absolute;
+        right: 110px;
+    }
+
+    section#topmenu {
+        padding: 27px;
+    }
+}
+
+@media (min-width:501px) {
+    .pagemenubar {
+        transform: translateX(0px) !important;
+
+    }
+
+    .menubar {
+        display: none !important;
+    }
+
+    .pagecontent {
+        padding-top: 0;
+    }
+
+    #toplinks {
+        margin-bottom: 15px;
     }
 }

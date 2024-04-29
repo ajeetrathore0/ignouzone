@@ -1,6 +1,7 @@
 
 import { Link, useParams } from 'react-router-dom'
 import file from '../icons/file.png'
+import filesize from '../icons/filesize.png'
 import duplicate from '../icons/duplicate.png'
 import { useState, useEffect } from 'react'
 import axios from 'axios';
@@ -147,8 +148,8 @@ export function DownloadAssignment() {
                                             </h3>
                                             <h4>Program : <i> {elem['program']}</i></h4>
                                             <h4>Semester : <i>{elem['semester']}</i> </h4>
-                                            <p><i>Size :</i> &nbsp; <b>{bytetomb(elem.size)} MB</b> </p>
-                                            <a href={elem.uuid}  onClick={(e) => { let a = String(elem.uuid); downloadAssignment(a) }}>Download</a>
+                                            <p><img src={filesize} alt="" /><i> Size :</i> &nbsp; <b>{bytetomb(elem.size)} MB</b> </p>
+                                            <a href={elem.uuid}  onClick={(e) => {e.preventDefault(); let a = String(elem.uuid); downloadAssignment(a) }}>Download</a>
                                         </span>
                                     </div>
                               

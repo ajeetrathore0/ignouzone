@@ -101,9 +101,12 @@ const Solveassignment = () => {
                                 <hr />
                                 <div className="program">
                                     <div className="videolist" style={{ background: "transparent", width: "100%" }}>
-
-
+                                        <Link to='select' style={{textAlign:'center',width:'100%'}}>
+                                        
                                         <button>Explore More →</button>
+                                        </Link>
+
+
                                     </div>
                                 </div>
 

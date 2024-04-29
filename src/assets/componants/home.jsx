@@ -26,6 +26,9 @@ import mba from '../images/mba.jpg'
 import bcs_012 from '../images/bcs_012.jpg'
 import mcsl_216 from '../images/mca_mcsl_216.jpg'
 import mcs_14 from '../images/mcs_14.jpg'
+import notespic from '../images/notes.png'
+import assignmentp from '../images/assignment.png'
+import More from '../componants/more'
 
 export const Searchbar = () => {
 
@@ -33,10 +36,48 @@ export const Searchbar = () => {
         <>
             <section id='searchbar'>
                 <div className="searchbar">
-                    <img src={search} alt="" />
-                    <input id='searchbarbutton' type="button" value="Search assignment, notes, more" />
+                    <Link to='search'>
+                        <img src={search} alt="" />
+                        <input id='searchbarbutton' type="button" value="Search assignment, notes, more" />
+                    </Link>
                 </div>
             </section>
+        </>
+    )
+}
+
+const TopLinks = () => {
+    return (
+        <>
+
+            <section id="booksell" style={{ background: 'transparent', padding: '0' }}>
+                <div className="booksell" id='toplinks' style={{ padding: '10px' }}>
+                    <Link to='assignment'>
+                        <div className="toplink">2024 Assignments</div>
+                    </Link>
+                    <Link to='books'>
+                        <div className="toplink">Books</div>
+                    </Link>
+
+                    <Link>
+                        <div className="toplink">Notification</div>
+                    </Link>
+                    <Link>
+                        <div className="toplink">#ignou</div>
+                    </Link>
+                    <Link>
+                        <div className="toplink">Video</div>
+                    </Link>
+                    <Link>
+                        <div className="toplink">Updates</div>
+                    </Link>
+                    <Link>
+                        <div className="toplink">News</div>
+                    </Link>
+
+                </div>
+            </section>
+
         </>
     )
 }
@@ -45,13 +86,10 @@ export const Searchbar = () => {
 
 const Slider = () => {
     const images = [
-        'https://unsplash.it/1900/1024/?image=497',
-        'https://unsplash.it/1900/1024/?image=291',
-        'https://unsplash.it/1900/1024/?image=786',
-        'https://unsplash.it/1900/1024/?image=768',
-        'https://unsplash.it/1900/1024/?image=726',
-        'https://unsplash.it/1900/1024/?image=821',
+        notespic,
+        assignmentp,
     ];
+    const [checkSlide, setCheckSlide] = useState(false)
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -68,7 +106,7 @@ const Slider = () => {
     };
 
     useEffect(() => {
-        const interval = setInterval(nextSlide, 3000); // Auto-slide every 3 seconds
+        const interval = setInterval(nextSlide, 5000); // Auto-slide every 3 seconds
 
         return () => {
             clearInterval(interval);
@@ -193,6 +231,9 @@ const Videosource = () => {
                             <i>BCA | MCA</i>
 
                         </span>
+                        <span>
+                            <h4>start</h4>
+                        </span>
                     </div>
                     <div className="videolist">
                         <span>
@@ -204,6 +245,9 @@ const Videosource = () => {
                             <i>BA | B.COM</i>
 
                         </span>
+                        <span>
+                            <h4>start</h4>
+                        </span>
                     </div>
                     <div className="videolist">
                         <span>
@@ -214,6 +258,9 @@ const Videosource = () => {
                             <p >All Semester </p>
                             <i>B.sc</i>
 
+                        </span>
+                        <span>
+                            <h4>start</h4>
                         </span>
                     </div>
                     <div className="videolist" style={{ background: "transparent" }}>
@@ -323,12 +370,14 @@ const PandP = () => {
 
 const Home = () => {
     useEffect(() => {
-        document.title = "Home || Ignou zone"
+        document.title = "Home || Ignou tech"
     }, [])
 
     return (
         <>
-            <Searchbar />
+
+            {/* <Searchbar /> */}
+            <TopLinks />
             <Slider />
             <Options />
             <Videosource />
