@@ -63,7 +63,7 @@ function More() {
                             <Link to='assignment'>
                                 <span>
                                     <img src={ass} alt="" />
-                                    <p>Solve Assignment</p>
+                                    <p>Assignment</p>
                                 </span>
                             </Link>
                         </li>
@@ -84,14 +84,7 @@ function More() {
                                 </span>
                             </Link>
                         </li>
-                        <li>
-                            <Link to='services'>
-                                <span>
-                                    <img src={service} alt="" />
-                                    <p>Services</p>
-                                </span>
-                            </Link>
-                        </li>
+                  
                         <li>
                             <span>
                                 <img src={update} alt="" />
@@ -106,22 +99,7 @@ function More() {
                             </span>
                             </Link>
                         </li>
-                        <li>
-                            <Link to='becomeapartner'>
-                                <span>
-                                    <img src={partner} alt="" />
-                                    <p>Become Partner</p>
-                                </span>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to='referandearn'>
-                                <span>
-                                    <img src={rupee} alt="" />
-                                    <p>Refer & Earn</p>
-                                </span>
-                            </Link>
-                        </li>
+                   
                         <li>
                             <Link to='setting'>
                                 <span>
@@ -131,12 +109,6 @@ function More() {
                             </Link>
                         </li>
 
-                        <li>
-                            <span>
-                                <img src={support} alt="" />
-                                <p>Support</p>
-                            </span>
-                        </li>
                     </ul>
                 </div>
             </section>
